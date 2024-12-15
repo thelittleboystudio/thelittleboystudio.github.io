@@ -10,6 +10,10 @@
     color: #333;
     background-color: #fefaf0; /* Bright creamy color */
   }
+
+  img {
+    height: 60px;
+  }
   
   .container {
     display: flex;
