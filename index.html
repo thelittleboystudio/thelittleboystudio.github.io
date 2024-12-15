@@ -1,7 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Little Boy Studio - Animations and Commissions by The Emotional Little Boy">
+  <meta name="author" content="The Emotional Little Boy">
+  <title>The Little Boy Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="container">
+    <div class="image-section"></div>
+    <div class="content-section">
+      <header>
+        <h1>The Little Boy Studio</h1>
+      </header>
+      <p class="description">
+        I do animations and am open for commissions. To see more of my personal work, please consider donating to the Bitcoin address below.
+      </p>
+      <div class="bitcoin-address">
+        <p>Bitcoin Address:</p>
+        <span id="btc-address" onclick="copyToClipboard()">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</span>
+        <p class="copy-msg" id="copy-msg"></p>
+      </div>
+      <a href="https://youtube.com" class="last-video" target="_blank">Watch the Last Video</a>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    function copyToClipboard() {
+      const btcAddress = document.getElementById('btc-address').innerText;
+      navigator.clipboard.writeText(btcAddress).then(() => {
+        const copyMsg = document.getElementById('copy-msg');
+        copyMsg.innerText = 'Bitcoin address copied!';
+        setTimeout(() => copyMsg.innerText = '', 2000);
+      });
+    }
+  </script>
 </body>
 </html>
