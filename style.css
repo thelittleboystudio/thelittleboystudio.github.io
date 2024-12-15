@@ -78,6 +78,7 @@
   .social-icons a {
     display: inline-block;
     margin-right: 15px;
+    font-size: 50px;
     color: #333;
     text-decoration: none;
   }
