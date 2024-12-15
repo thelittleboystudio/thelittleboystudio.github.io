@@ -1,0 +1,106 @@
+/* Load custom font */
+@font-face {
+    font-family: "CustomFont";
+    src: url("CustomFont.ttf") format("truetype");
+  }
+  
+  body {
+    font-family: "CustomFont", Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #fefaf0; /* Bright creamy color */
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  
+  .image-section {
+    background: url('background-desktop.jpg') no-repeat center center/cover;
+    flex: 1;
+    max-width: 25%;
+  }
+  
+  .content-section {
+    flex: 3;
+    max-width: 75%;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .description {
+    margin: 20px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .bitcoin-address {
+    margin: 20px 0;
+  }
+  
+  #btc-address {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .copy-msg {
+    color: green;
+    font-size: 0.9em;
+  }
+  
+  .last-video {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .last-video:hover {
+    background-color: #0056b3;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .image-section {
+      max-width: 33%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .image-section {
+      max-width: 100%;
+      height: 50px;
+      background: url('background-mobile.jpg') no-repeat center center/cover;
+    }
+  
+    .content-section {
+      max-width: 100%;
+    }
+  }
